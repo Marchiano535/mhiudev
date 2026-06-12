@@ -15,13 +15,13 @@ const projects = [
     iconKey: "shield",
   },
   {
-    id: "compro-fe",
-    title: "Company Profile FE",
+    id: "medical-toolkit",
+    title: "Medical Toolkit",
     description:
-      "Frontend company profile yang dibangun menggunakan TypeScript. Tampilan modern dan responsif untuk keperluan bisnis.",
-    tech: ["TypeScript", "React", "CSS"],
+      "Medical Toolkit adalah website untuk keperluan medis yang dibangun menggunakan Python. Bisa untuk keperluan rumah sakit, klinik, dan lainnya.",
+    tech: ["Python", "PySide6"],
     color: "#7c3aed",
-    github: "https://github.com/Marchiano535/compro-fe",
+    github: "https://github.com/Marchiano535/medical-toolkit",
     live: null,
     iconKey: "layout",
   },
