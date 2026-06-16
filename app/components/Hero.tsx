@@ -249,37 +249,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Scroll indicator */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "-3rem",
-            left: "50%",
-            transform: "translateX(-50%)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "0.3rem",
-            color: "#475569",
-            fontSize: "0.75rem",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-          }}
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            style={{ animation: "float 2s ease-in-out infinite" }}
-          >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <polyline points="19 12 12 19 5 12" />
-          </svg>
-          scroll
-        </div>
+
       </div>
     </section>
   );
