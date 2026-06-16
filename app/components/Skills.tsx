@@ -81,7 +81,7 @@ export default function Skills() {
               fontSize: "0.78rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#7c3aed",
+              color: "#dc2626",
               fontWeight: 600,
             }}
           >

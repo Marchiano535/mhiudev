@@ -58,7 +58,7 @@ export default function Navbar() {
             letterSpacing: "-0.5px",
           }}
         >
-          <span style={{ color: "#a78bfa" }}>M</span>archiano
+          <span style={{ color: "#f87171" }}>M</span>archiano
         </a>
 
         {/* Desktop links */}
@@ -82,7 +82,7 @@ export default function Navbar() {
                 transition: "color 0.2s",
               }}
               onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.color = "#a78bfa")
+                ((e.target as HTMLElement).style.color = "#f87171")
               }
               onMouseLeave={(e) =>
                 ((e.target as HTMLElement).style.color = "#94a3b8")
@@ -101,9 +101,9 @@ export default function Navbar() {
               gap: "0.4rem",
               padding: "0.45rem 1rem",
               borderRadius: "8px",
-              border: "1px solid rgba(124, 58, 237, 0.5)",
-              background: "rgba(124, 58, 237, 0.1)",
-              color: "#a78bfa",
+              border: "1px solid rgba(220, 38, 38, 0.5)",
+              background: "rgba(220, 38, 38, 0.1)",
+              color: "#f87171",
               textDecoration: "none",
               fontSize: "0.85rem",
               fontWeight: 500,
@@ -111,13 +111,13 @@ export default function Navbar() {
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget;
-              el.style.background = "rgba(124, 58, 237, 0.25)";
-              el.style.borderColor = "#7c3aed";
+              el.style.background = "rgba(220, 38, 38, 0.25)";
+              el.style.borderColor = "#dc2626";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget;
-              el.style.background = "rgba(124, 58, 237, 0.1)";
-              el.style.borderColor = "rgba(124, 58, 237, 0.5)";
+              el.style.background = "rgba(220, 38, 38, 0.1)";
+              el.style.borderColor = "rgba(220, 38, 38, 0.5)";
             }}
           >
             <GithubIcon size={15} />

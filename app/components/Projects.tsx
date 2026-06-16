@@ -20,7 +20,7 @@ const projects = [
     description:
       "Medical Toolkit adalah website untuk keperluan medis yang dibangun menggunakan Python. Bisa untuk keperluan rumah sakit, klinik, dan lainnya.",
     tech: ["Python", "PySide6"],
-    color: "#7c3aed",
+    color: "#dc2626",
     github: "https://github.com/Marchiano535/medical-toolkit",
     live: null,
     iconKey: "layout",
@@ -110,7 +110,7 @@ export default function Projects() {
           transform: "translateX(-50%)",
           width: "1px",
           height: "3rem",
-          background: "linear-gradient(to bottom, transparent, #7c3aed)",
+          background: "linear-gradient(to bottom, transparent, #dc2626)",
         }}
       />
 
@@ -122,7 +122,7 @@ export default function Projects() {
               fontSize: "0.78rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#7c3aed",
+              color: "#dc2626",
               fontWeight: 600,
             }}
           >
@@ -245,7 +245,7 @@ export default function Projects() {
                       textDecoration: "none",
                     }}
                     title="GitHub"
-                    onMouseEnter={(e) => ((e.currentTarget.style.color = "#a78bfa"))}
+                    onMouseEnter={(e) => ((e.currentTarget.style.color = "#f87171"))}
                     onMouseLeave={(e) => ((e.currentTarget.style.color = "#64748b"))}
                   >
                     <GithubIcon />
@@ -299,7 +299,7 @@ export default function Projects() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              color: "#7c3aed",
+              color: "#dc2626",
               textDecoration: "none",
               fontWeight: 500,
               fontSize: "0.9rem",

@@ -26,7 +26,7 @@ export default function Hero() {
           height: "400px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(220, 38, 38, 0.12) 0%, transparent 70%)",
           filter: "blur(40px)",
           pointerEvents: "none",
         }}
@@ -40,7 +40,7 @@ export default function Hero() {
           height: "350px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%)",
           filter: "blur(40px)",
           pointerEvents: "none",
         }}
@@ -88,7 +88,7 @@ export default function Hero() {
               position: "absolute",
               inset: "-4px",
               borderRadius: "50%",
-              background: "linear-gradient(135deg, #7c3aed, #06b6d4)",
+              background: "linear-gradient(135deg, #dc2626, #ef4444)",
               zIndex: 0,
             }}
           />
@@ -116,10 +116,10 @@ export default function Hero() {
             gap: "0.5rem",
             padding: "0.35rem 1rem",
             borderRadius: "9999px",
-            background: "rgba(124, 58, 237, 0.1)",
-            border: "1px solid rgba(124, 58, 237, 0.3)",
+            background: "rgba(220, 38, 38, 0.1)",
+            border: "1px solid rgba(220, 38, 38, 0.3)",
             fontSize: "0.8rem",
-            color: "#a78bfa",
+            color: "#f87171",
             fontWeight: 500,
           }}
         >
@@ -162,7 +162,7 @@ export default function Hero() {
           }}
         >
           Informatics student at{" "}
-          <span style={{ color: "#c4b5fd", fontWeight: 500 }}>
+          <span style={{ color: "#f87171", fontWeight: 500 }}>
             Telkom University
           </span>{" "}
           — building web apps & exploring data
@@ -189,23 +189,23 @@ export default function Hero() {
               gap: "0.5rem",
               padding: "0.7rem 1.5rem",
               borderRadius: "10px",
-              background: "linear-gradient(135deg, #7c3aed, #6d28d9)",
+              background: "linear-gradient(135deg, #dc2626, #b91c1c)",
               color: "#fff",
               textDecoration: "none",
               fontWeight: 600,
               fontSize: "0.95rem",
               transition: "all 0.2s ease",
-              boxShadow: "0 4px 20px rgba(124, 58, 237, 0.3)",
+              boxShadow: "0 4px 20px rgba(220, 38, 38, 0.3)",
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget;
               el.style.transform = "translateY(-2px)";
-              el.style.boxShadow = "0 8px 30px rgba(124, 58, 237, 0.5)";
+              el.style.boxShadow = "0 8px 30px rgba(220, 38, 38, 0.5)";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget;
               el.style.transform = "translateY(0)";
-              el.style.boxShadow = "0 4px 20px rgba(124, 58, 237, 0.3)";
+              el.style.boxShadow = "0 4px 20px rgba(220, 38, 38, 0.3)";
             }}
           >
             <GithubIcon size={18} />
@@ -234,8 +234,8 @@ export default function Hero() {
             onMouseEnter={(e) => {
               const el = e.currentTarget;
               el.style.transform = "translateY(-2px)";
-              el.style.borderColor = "#a78bfa";
-              el.style.color = "#a78bfa";
+              el.style.borderColor = "#f87171";
+              el.style.color = "#f87171";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget;

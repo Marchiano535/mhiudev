@@ -16,7 +16,7 @@ const links = [
     key: "github",
     label: "GitHub",
     href: CONTACTS.github,
-    color: "#a78bfa",
+    color: "#f87171",
     icon: <GithubIcon />,
   },
   {
@@ -30,7 +30,7 @@ const links = [
     key: "email",
     label: "Email",
     href: `mailto:${CONTACTS.email}`,
-    color: "#06b6d4",
+    color: "#ef4444",
     icon: <MailIcon />,
   },
   {
@@ -75,7 +75,7 @@ export default function Footer() {
           transform: "translateX(-50%)",
           width: "1px",
           height: "3rem",
-          background: "linear-gradient(to bottom, transparent, #7c3aed)",
+          background: "linear-gradient(to bottom, transparent, #dc2626)",
         }}
       />
 
@@ -97,7 +97,7 @@ export default function Footer() {
               fontSize: "0.78rem",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#7c3aed",
+              color: "#dc2626",
               fontWeight: 600,
             }}
           >
