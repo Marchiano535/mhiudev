@@ -2,21 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { skills } from "@/app/lib/data";
 
-const skills = [
-  { name: "React / Next.js", key: "react",      color: "#61dafb", img: "/img/react.png" },
-  { name: "TypeScript",      key: "typescript", color: "#3178c6", img: null },
-  { name: "JavaScript",      key: "javascript", color: "#f7df1e", img: null },
-  { name: "Python",          key: "python",     color: "#3776ab", img: "/img/python.png" },
-  { name: "PHP",             key: "php",        color: "#777bb4", img: "/img/php.png" },
-  { name: "Laravel",         key: "laravel",    color: "#ff2d20", img: "/img/Laravel.png" },
-  { name: "Data Analysis",   key: "data",       color: "#e879f9", img: "/img/Data analyst.png" },
-  { name: "HTML",            key: "html",       color: "#e34f26", img: "/img/HTML.png" },
-  { name: "CSS",             key: "css",        color: "#2965f1", img: "/img/css.png" },
-  { name: "Jupyter",         key: "jupyter",    color: "#f37626", img: "/img/Jupyter.png" },
-];
-
-// SVG fallback untuk skill tanpa gambar
 function SvgIcon({ name, color }: { name: string; color: string }) {
   switch (name) {
     case "typescript":
@@ -40,7 +27,7 @@ function SvgIcon({ name, color }: { name: string; color: string }) {
         </svg>
       );
     default:
-      return <span style={{ fontSize: "1.6rem", color }}>•</span>;
+      return <span className="text-xl" style={{ color }}>•</span>;
   }
 }
 
@@ -56,7 +43,7 @@ export default function Skills() {
               setTimeout(() => {
                 (el as HTMLElement).style.opacity = "1";
                 (el as HTMLElement).style.transform = "translateY(0)";
-              }, i * 80);
+              }, i * 60);
             });
           }
         });
@@ -71,65 +58,27 @@ export default function Skills() {
     <section
       id="skills"
       ref={sectionRef}
-      style={{ padding: "6rem 1.5rem", position: "relative" }}
+      className="py-24 px-6 relative"
     >
-      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-        {/* Section header */}
-        <div style={{ marginBottom: "3rem", textAlign: "center" }}>
-          <span
-            style={{
-              fontSize: "0.78rem",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              color: "#dc2626",
-              fontWeight: 600,
-            }}
-          >
+      <div className="max-w-[1100px] mx-auto">
+        <div className="mb-12 text-center">
+          <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Tech Stack
           </span>
-          <h2
-            style={{
-              fontFamily: "'Outfit', sans-serif",
-              fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
-              fontWeight: 700,
-              color: "#f1f5f9",
-              marginTop: "0.5rem",
-              letterSpacing: "-1px",
-            }}
-          >
+          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             What I Work With
           </h2>
         </div>
 
-        {/* Skills grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-            gap: "1rem",
-          }}
-        >
+        <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))" }}>
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="skill-card glass-card"
-              style={{
-                padding: "1.25rem 1rem",
-                borderRadius: "12px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "0.7rem",
-                opacity: 0,
-                transform: "translateY(20px)",
-                transition:
-                  "opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease",
-                cursor: "default",
-              }}
+              className="skill-card card rounded-xl p-5 flex flex-col items-center gap-3 opacity-0 translate-y-5 transition-all duration-500 cursor-default"
               onMouseEnter={(e) => {
                 const el = e.currentTarget;
-                el.style.borderColor = skill.color + "55";
-                el.style.boxShadow = `0 4px 20px ${skill.color}22`;
+                el.style.borderColor = skill.color + "44";
+                el.style.boxShadow = `0 4px 20px ${skill.color}18`;
                 el.style.transform = "translateY(-4px)";
               }}
               onMouseLeave={(e) => {
@@ -139,29 +88,20 @@ export default function Skills() {
                 el.style.transform = "translateY(0)";
               }}
             >
-              {/* Icon: pakai gambar asli kalau ada, SVG kalau tidak */}
-              <div style={{ width: 38, height: 38, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div className="w-[38px] h-[38px] flex items-center justify-center">
                 {skill.img ? (
                   <Image
                     src={skill.img}
                     alt={skill.name}
                     width={38}
                     height={38}
-                    style={{ objectFit: "contain", width: "38px", height: "38px" }}
+                    className="object-contain w-[38px] h-[38px]"
                   />
                 ) : (
                   <SvgIcon name={skill.key} color={skill.color} />
                 )}
               </div>
-
-              <span
-                style={{
-                  fontSize: "0.82rem",
-                  fontWeight: 500,
-                  color: "#cbd5e1",
-                  textAlign: "center",
-                }}
-              >
+              <span className="text-xs font-medium text-[var(--text-soft)] text-center">
                 {skill.name}
               </span>
             </div>

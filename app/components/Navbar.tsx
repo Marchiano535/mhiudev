@@ -1,12 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const navLinks = [
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-];
+import { navLinks, profile } from "@/app/lib/data";
+import { GithubIcon } from "./icons";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,104 +17,37 @@ export default function Navbar() {
   return (
     <nav
       id="navbar"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6"
       style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 50,
-        transition: "all 0.3s ease",
-        padding: "0 1.5rem",
-        background: scrolled
-          ? "rgba(12, 12, 20, 0.9)"
-          : "transparent",
-        borderBottom: scrolled ? "1px solid rgba(30, 30, 50, 0.8)" : "none",
+        background: scrolled ? "rgba(10, 10, 15, 0.9)" : "transparent",
+        borderBottom: scrolled ? "1px solid var(--border)" : "none",
         backdropFilter: scrolled ? "blur(12px)" : "none",
       }}
     >
-      <div
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: "64px",
-        }}
-      >
-        {/* Logo */}
+      <div className="max-w-[1100px] mx-auto flex items-center justify-between h-16">
         <a
           href="#home"
-          style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: 700,
-            fontSize: "1.25rem",
-            color: "#e2e8f0",
-            textDecoration: "none",
-            letterSpacing: "-0.5px",
-          }}
+          className="font-[var(--font-display)] font-bold text-xl text-[var(--text)] no-underline tracking-tight"
         >
-          <span style={{ color: "#f87171" }}>M</span>archiano
+          <span className="text-[var(--accent)]">M</span>archiano
         </a>
 
         {/* Desktop links */}
-        <div
-          style={{
-            display: "flex",
-            gap: "2rem",
-            alignItems: "center",
-          }}
-          className="hidden-mobile"
-        >
+        <div className="hidden-mobile flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              style={{
-                color: "#94a3b8",
-                textDecoration: "none",
-                fontSize: "0.9rem",
-                fontWeight: 500,
-                transition: "color 0.2s",
-              }}
-              onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.color = "#f87171")
-              }
-              onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.color = "#94a3b8")
-              }
+              className="text-[var(--text-soft)] no-underline text-sm font-medium hover:text-[var(--accent)] transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://github.com/Marchiano535"
+            href={profile.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.4rem",
-              padding: "0.45rem 1rem",
-              borderRadius: "8px",
-              border: "1px solid rgba(220, 38, 38, 0.5)",
-              background: "rgba(220, 38, 38, 0.1)",
-              color: "#f87171",
-              textDecoration: "none",
-              fontSize: "0.85rem",
-              fontWeight: 500,
-              transition: "all 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              const el = e.currentTarget;
-              el.style.background = "rgba(220, 38, 38, 0.25)";
-              el.style.borderColor = "#dc2626";
-            }}
-            onMouseLeave={(e) => {
-              const el = e.currentTarget;
-              el.style.background = "rgba(220, 38, 38, 0.1)";
-              el.style.borderColor = "rgba(220, 38, 38, 0.5)";
-            }}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[rgba(6,182,212,0.3)] bg-[var(--accent-dim)] text-[var(--accent)] no-underline text-sm font-medium hover:bg-[rgba(6,182,212,0.15)] hover:border-[var(--accent)] transition-all"
           >
             <GithubIcon size={15} />
             GitHub
@@ -128,15 +57,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          style={{
-            display: "none",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            color: "#e2e8f0",
-            padding: "4px",
-          }}
-          className="show-mobile"
+          className="show-mobile bg-transparent border-none cursor-pointer text-[var(--text)] p-1"
           aria-label="Toggle menu"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -158,27 +79,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div
-          style={{
-            background: "rgba(12, 12, 20, 0.98)",
-            borderTop: "1px solid rgba(30, 30, 50, 0.8)",
-            padding: "1rem 1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
-        >
+        <div className="show-mobile bg-[rgba(10,10,15,0.98)] border-t border-[var(--border)] p-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              style={{
-                color: "#94a3b8",
-                textDecoration: "none",
-                fontSize: "1rem",
-                fontWeight: 500,
-              }}
+              className="text-[var(--text-soft)] no-underline text-base font-medium hover:text-[var(--accent)] transition-colors"
             >
               {link.label}
             </a>
@@ -196,13 +103,5 @@ export default function Navbar() {
         }
       `}</style>
     </nav>
-  );
-}
-
-function GithubIcon({ size = 20 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-    </svg>
   );
 }

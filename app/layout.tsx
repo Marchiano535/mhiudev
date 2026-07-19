@@ -4,11 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Marchiano — Informatics Student & Developer",
   description:
-    "Portofolio Marchiano Faraitody — Mahasiswa Informatika Telkom University, passionate about building elegant web applications and data-driven solutions.",
-  keywords: ["Marchiano", "Portofolio", "Frontend Developer", "Telkom University", "Informatika"],
+    "Portfolio of Marchiano Faraitody — Informatics student at Telkom University, building web applications and exploring data-driven solutions.",
+  keywords: ["Marchiano", "Portfolio", "Frontend Developer", "Telkom University", "Informatics"],
   openGraph: {
     title: "Marchiano — Informatics Student & Developer",
-    description: "Portofolio Marchiano Faraitody — Frontend Developer & Informatics Student",
+    description: "Portfolio of Marchiano Faraitody — Frontend Developer & Informatics Student",
     type: "website",
   },
 };
@@ -19,16 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="h-full">
+    <html lang="en" className="h-full">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col noise-bg">{children}</body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
