@@ -65,7 +65,7 @@ export default function Skills() {
           <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Tech Stack
           </span>
-          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             What I Work With
           </h2>
         </div>

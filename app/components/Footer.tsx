@@ -62,7 +62,7 @@ export default function Footer() {
           <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Contact
           </span>
-          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             Let&apos;s Connect
           </h2>
           <p className="text-[var(--text-muted)] text-sm mt-3 leading-relaxed">

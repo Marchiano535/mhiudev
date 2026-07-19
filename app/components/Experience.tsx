@@ -38,7 +38,7 @@ export default function Experience() {
           <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Experience
           </span>
-          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             Where I&apos;ve Worked
           </h2>
         </div>
@@ -61,7 +61,7 @@ export default function Experience() {
                 <div className="card rounded-xl p-6">
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="font-[var(--font-display)] font-bold text-[var(--text)] text-lg">
+                      <h3 className="font-display font-bold text-[var(--text)] text-lg">
                         {exp.role}
                       </h3>
                       <p className="text-[var(--accent)] text-sm font-medium">

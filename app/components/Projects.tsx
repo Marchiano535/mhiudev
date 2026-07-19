@@ -41,7 +41,7 @@ export default function Projects() {
           <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Work
           </span>
-          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             Selected Projects
           </h2>
         </div>
@@ -75,7 +75,7 @@ export default function Projects() {
                   >
                     <ProjectIcon iconKey={project.iconKey} color={project.color} />
                   </div>
-                  <h3 className="font-[var(--font-display)] font-bold text-[var(--text)] text-base m-0">
+                  <h3 className="font-display font-bold text-[var(--text)] text-base m-0">
                     {project.title}
                   </h3>
                 </div>

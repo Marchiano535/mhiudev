@@ -71,7 +71,7 @@ export default function Hero() {
         </div>
 
         {/* Name */}
-        <h1 className="font-[var(--font-display)] font-extrabold text-[var(--text)] leading-tight tracking-tight m-0" style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)" }}>
+        <h1 className="font-display font-extrabold text-[var(--text)] leading-tight tracking-tight m-0" style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)" }}>
           Hi, I&apos;m{" "}
           <span className="gradient-text">{profile.name}</span>
         </h1>

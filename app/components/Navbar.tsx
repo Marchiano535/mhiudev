@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="max-w-[1100px] mx-auto flex items-center justify-between h-16">
         <a
           href="#home"
-          className="font-[var(--font-display)] font-bold text-xl text-[var(--text)] no-underline tracking-tight"
+          className="font-display font-bold text-xl text-[var(--text)] no-underline tracking-tight"
         >
           <span className="text-[var(--accent)]">M</span>archiano
         </a>

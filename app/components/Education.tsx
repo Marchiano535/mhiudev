@@ -41,7 +41,7 @@ export default function Education() {
           <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Education
           </span>
-          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             Where I Studied
           </h2>
         </div>
@@ -59,7 +59,7 @@ export default function Education() {
                 <div className="flex-1">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
-                      <h3 className="font-[var(--font-display)] font-bold text-[var(--text)] text-lg">
+                      <h3 className="font-display font-bold text-[var(--text)] text-lg">
                         {edu.degree}
                       </h3>
                       <p className="text-[var(--accent)] text-sm font-medium">

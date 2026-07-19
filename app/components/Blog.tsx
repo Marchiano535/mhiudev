@@ -36,7 +36,7 @@ export default function Blog() {
           <span className="text-xs tracking-[0.15em] uppercase text-[var(--accent)] font-semibold">
             Blog
           </span>
-          <h2 className="font-[var(--font-display)] text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
+          <h2 className="font-display text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-[var(--text)] mt-2 tracking-tight">
             Latest Thoughts
           </h2>
         </div>
@@ -58,7 +58,7 @@ export default function Blog() {
                 className="card rounded-xl p-6 opacity-0 translate-y-5 transition-all duration-500"
               >
                 <span className="text-xs text-[var(--text-muted)]">{post.date}</span>
-                <h3 className="font-[var(--font-display)] font-bold text-[var(--text)] mt-2 mb-2">
+                <h3 className="font-display font-bold text-[var(--text)] mt-2 mb-2">
                   {post.title}
                 </h3>
                 <p className="text-[var(--text-muted)] text-sm leading-relaxed mb-4">
